@@ -1,23 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="index.php" method="post">
+        <label>Quantity: </label><br>
+        <input type="text" name="quantity">
+        <input type="submit" value="total">
+    </form>
+</body>
+</html>
+
 <?php
-    $name = "Bro Code";
-    $food = "Pizza";
-    $email = "fake@gmail.com";
-
-    $age = 21;
-    $users = 2;
-    $quantity = 3;
-
-    $gpa = 2.5;
-    $price = 4.99;
-    $tax_rate = 5.1;
-
-    $employed = true;
-    $online = false;
-    $for_sale = true;
-
+    $item = "pizza";
+    $price = 5.99;
+    $quantity = $_POST["quantity"];
     $total = null;
-
-    echo "You have orderd {$quantity} x {$food}<br>";
     $total = $quantity * $price;
-    echo "The price is {$total}";
+    echo "You have orderd {$quantity} x {$item}/s <br>";
+    echo "Your total is: \${$total}";
 ?>
