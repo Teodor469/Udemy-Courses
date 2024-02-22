@@ -13,4 +13,8 @@
 
     echo"The ticket price is \${$ticket}";
 
+    // && = and (if both conditions are true)
+    // || = or
+    // ! = not
+
 ?>
