@@ -20,27 +20,25 @@
 
 <?php
 
-    /*
     foreach($_POST as $key => $value){
         echo "{$key} = {$value} <br>";
     }
-    */
 
 
-    if(isset($_POST["login"])){
+    // if(isset($_POST["login"])){
         
-        $username = $_POST["username"];
-        $password = $_POST["password"];
+    //     $username = $_POST["username"];
+    //     $password = $_POST["password"];
 
-        if(empty($username)){
-            echo "Username is missing";
-        }
-        elseif(empty($password)){
-            echo "Password is missing";
-        }
-        else{
-            echo "Hello {$username}";
-        }
+    //     if(empty($username)){
+    //         echo "Username is missing";
+    //     }
+    //     elseif(empty($password)){
+    //         echo "Password is missing";
+    //     }
+    //     else{
+    //         echo "Hello {$username}";
+    //     }
 
-    }
+    // }
 ?>
