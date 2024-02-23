@@ -13,13 +13,12 @@
     // $username = strcmp($username, "Bro code");
     // $username = strpos($username, " ");
     // $username = substr($username, 0, 6);
-    $fullname = explode(" ", $username);
-    $blah = implode(" ", $fullname);
+    // $fullname = explode(" ", $username);
+    // $blah = implode(" ", $fullname);
 
     foreach($fullname as $name){
         echo $name . "<br>";
     }
 
     echo $fullname;
-    echo $blah;
 ?>
