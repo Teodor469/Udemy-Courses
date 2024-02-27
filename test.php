@@ -13,7 +13,7 @@ $result = $number3 . $number2;
 $result = $fruit . $number2;
 $result = $number1 + $bool1;
 $result = $number1 + $null;
-$result = (string) $number1;
+$result = (string) $number1; 
 
 var_dump($result)
 
