@@ -65,6 +65,28 @@ $output = number_format(1235235.312987, 2, '.', ',')
 // // trim
 // $output = trim(    'Hello'     );
 
+
+
+// $output = date('Y');
+
+// $output = date('Y', 936345600);
+
+// $output = date('Y', strtotime('1999-09-01'));
+
+// $output = date('l');
+
+// $output = date('Y-m-d');
+
+// $output = date('h');
+
+// $output = date('i');
+
+// $output = date('s');
+
+// $output = date('a');
+
+// $output = date('Y-m-d h:i:s a');
+
 $output = null;
 ?>
 
