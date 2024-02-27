@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 
 $number1 = 5;
 $number2 = 10;
@@ -17,4 +17,4 @@ $result = (string) $number1;
 
 var_dump($result)
 
-?>
+?> -->
