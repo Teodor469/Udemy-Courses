@@ -3,6 +3,7 @@
 
     $name2 = "Joe Shmoe";
 
-    echo $name2
-
+    var_dump($name);
+    echo "<br />";
+    echo gettype($name2);
 ?>
