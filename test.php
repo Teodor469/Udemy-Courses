@@ -18,3 +18,10 @@ $result = (string) $number1;
 var_dump($result)
 
 ?> -->
+
+
+
+<?php
+
+
+?>
