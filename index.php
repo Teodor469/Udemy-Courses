@@ -1,3 +1,75 @@
+<?php
+
+/* math operations
+$output = null;
+
+$num1 = 20;
+$num2 = 10;
+
+$output = "$num1 + $num2 = " . $num1 + $num2;
+$output = "$num1 - $num2 = " . $num1 - $num2;
+$output = "$num1 * $num2 = " . $num1 * $num2;
+$output = "$num1 / $num2 = " . $num1 / $num2;
+$output = "$num1 % $num2 = " . $num1 % $num2;
+
+
+// Built-in PHP functions
+$output = rand();
+
+$output = round(4.4);
+
+$output = ceil(4.2);
+
+$output = floor(4.9);
+
+$output = sqrt(64);
+
+$output = pi();
+
+$output = abs(4.7);
+
+$output = number_format(1235235.312987, 2, '.', ',')
+*/
+
+// string functions
+// $output = null;
+// $string = 'Hello world!';
+
+// //strlen()
+// $output = strlen($string);
+
+// // str_word_count
+// $output = str_word_count($string);
+
+// // strpos()
+// $output = strpos($string, 'world');
+
+// // Get specific character by index
+// $output = $string[4];
+
+// //substr
+// $output = substr($string, 6, 6);
+
+// // str_replace()
+// $output = str_replace('world', 'universe', $string);
+
+// // strlower()
+// $output =strtolower($string);
+
+// // strtoupper()
+// $output = strtoupper($string);
+
+// // ucwords
+// $output = ucwords($string);
+
+// // trim
+// $output = trim(    'Hello'     );
+
+$output = null;
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,45 +88,9 @@
     </header>
     <div class="container mx-auto p-4 mt-4">
         <div class="bg-white rounded-lg shadow-md p-6">
-        <form action="index.php" method="post">
-                <label>Calculate</label>
-                <input type="text" name="num1" placeholder="Enter number 1">
-                <input type="text" name="num2" placeholder="Enter number 2">
-                <input type="text" name="symbol" placeholder="Enter +, -, *, or /">
-                <input type="submit" value="Calculate">
-            </form>
-            <?php
-            if (isset($_POST["symbol"])) {
-                $num1 = isset($_POST["num1"]) ? $_POST["num1"] : null;
-                $num2 = isset($_POST["num2"]) ? $_POST["num2"] : null;
-                $symbol = isset($_POST["symbol"]) ? $_POST["symbol"] : null;
-                $result = null;
-
-                // Checking for division by zero
-                if ($symbol === '/' && $num2 == 0) {
-                    echo "Cannot divide by zero.";
-                } else {
-                    // Performing calculations based on the selected symbol
-                    switch ($symbol) {
-                        case '+':
-                            $result = $num1 + $num2;
-                            break;
-                        case '-':
-                            $result = $num1 - $num2;
-                            break;
-                        case '*':
-                            $result = $num1 * $num2;
-                            break;
-                        case '/':
-                            $result = $num1 / $num2;
-                            break;
-                        default:
-                            echo "Invalid symbol.";
-                    }
-                    echo "Result: $result";
-                }
-            }
-            ?>
+            <p class="text-xl">
+                <?= $output ?>
+            </p>
         </div>
     </div>
 </body>
