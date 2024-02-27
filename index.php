@@ -1,3 +1,12 @@
+<?php
+    $first_name = 'John';
+    $last_name = "Doe";
+
+    $full_name = $first_name . ' ' . $last_name
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,8 +25,8 @@
     </header>
     <div class="container mx-auto p-4 mt-4">
         <div class="bg-white rounded-lg shadow-md p-6">
-            <h2 class="text-2xl font-semibold mb-4">Welcome To The Course</h2>
-            <p>In this course, you will learn the fundamentals of the PHP language</p>
+            <?= "Hello my name is " . $full_name . '<br>'; ?>
+            <?= "Hello my name is {$full_name}<br>"  ?>
         </div>
     </div>
 </body>
