@@ -19,8 +19,14 @@ $users = [
 ];
 
 $users[] = ['name' => 'Mike', 'email' => 'Mike@gmail.com', 'password' => '123456'];
+array_push($users, ['name' => 'Larry', 'email' => 'Larry@gmail.com', 'password' => '123456']);
+array_pop($users);
+array_shift($users);
+
+unset($users[0]);
 
 $output = $users[1]['email'];
+$output = count($users);
 ?>
 
 <!DOCTYPE html>
