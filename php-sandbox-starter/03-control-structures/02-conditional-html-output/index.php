@@ -1,3 +1,12 @@
+<?php
+$is_logged_in = true;
+$name = 2;
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,7 +26,26 @@
   <div class="container mx-auto p-4 mt-4">
     <div class="bg-white rounded-lg shadow-md p-6 mt-6">
       <!-- Output -->
-      <h1 class="text-3xl">Welcome</h1>
+      <?php if($is_logged_in)  :?>
+        <?php if (isset($name)) : ?>
+          <h1 class="text-3xl">Welcome <?= $name ?></h1>
+          <?php else : ?>
+            <h1 class="text-3xl">Welcome</h1>
+        <?php endif; ?>
+        
+      <?php else : ?>
+        <h1 class="text-3xl">Log in</h1>
+      <?php endif; ?>
+
+
+      <?php if ($is_logged_in && $name) : ?>
+        <h1 class="text-3xl">Welcome <?= $name ?></h1>
+      <?php elseif($is_logged_in) :?>
+        <h1 class="text-3xl">Welcome</h1>
+      <?php else : ?>
+        <h1 class="text-3xl">Log in</h1>
+      <?php endif; ?>
+
     </div>
   </div>
 </body>
