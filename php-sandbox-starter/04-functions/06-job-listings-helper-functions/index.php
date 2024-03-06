@@ -41,6 +41,15 @@ $listings = [
     'tags' => []
   ],
 ];
+
+function format_salary($salary) {
+  return '$' . number_format($salary);
+}
+
+function highlight_tags($tags, $search_term) {
+  $tag_str = implode(', ', $tags);
+  return str_replace($search_term, "<span class='bg-yellow-200'>{$search_term}</span>", $tag_str);
+}
 ?>
 
 
@@ -69,7 +78,7 @@ $listings = [
             <p class="text-gray-700 text-lg mt-2"><?= $job['description'] ?></p>
             <ul class="mt-4">
               <li class="mb-2">
-                <strong>Salary:</strong> <?= $job['salary'] ?>
+                <strong>Salary:</strong> <?= format_salary($job['salary']) ?>
               </li>
               <li class="mb-2">
                 <strong>Location:</strong> <?= $job['location'] ?>
@@ -78,7 +87,7 @@ $listings = [
               </li>
               <?php if (!empty($job['tags'])) : ?>
                 <li class="mb-2">
-                  <strong>Tags:</strong> <?= implode(', ', $job['tags']) ?>
+                  <strong>Tags:</strong> <?= highlight_tags($job['tags'], 'SEO') ?>
                 </li>
               <?php endif; ?>
             </ul>
