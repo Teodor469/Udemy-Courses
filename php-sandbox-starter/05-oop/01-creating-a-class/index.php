@@ -1,10 +1,11 @@
 <?php
 
 class User {
-    //Properties
+    //Properties decleration
     public $name;
     public $email;
 
+    // Properties initialization
     public function __construct($name, $email)
     {
         $this->name = $name;
