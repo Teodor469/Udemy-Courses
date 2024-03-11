@@ -33,4 +33,15 @@ function inspect($value){
 
 inspect($names);
 inspect($numbers);
+
+
+function maps($x)
+{
+  $doubled_numbers = []
+  foreach ($x as $value) {
+    $value *= 2;
+    $doubled_numbers[] = $value;
+  }
+  return $doubled_numbers;
+}
 ?>
