@@ -1,3 +1,9 @@
+<?php
+  echo $_REQUEST['name'] ?? '';
+
+?>
+
+
 <form method="post">
   <div>
     <label for="name">Name:</label>
