@@ -7,9 +7,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
   $title = htmlspecialchars($_POST['title'] ?? '');
   $description = htmlspecialchars($_POST['description'] ?? '');
 
-  echo '<pre>';
-  var_dump($_FILES);
-  echo '<pre>';
+  $file = $_FILES['logo'];
+
+  if($file['error'] === UPLOAD_ERR_OK) {
+    $upload_dir = 'uploads/';
+    //check and create a dir
+    if(!is_dir($upload_dir)) {
+      mkdir($upload_dir, 0755, true);
+    }
+
+    $filename = uniqid() . '-' . $file['name'];
+
+    $allowed_extensions = ['jpg', 'jpeg', 'png'];
+    $file_extension = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
+
+    if (in_array($file_extension, $allowed_extensions)) {
+      if(move_uploaded_file($file['tmp_name'], $upload_dir . $filename)) {
+        echo 'File uploaded';
+      } else {
+        echo 'File upload error: ' . $file['error'];
+      }
+    } else {
+      echo 'Invalid image format';
+    }
+
+  }
 
   $submitted = true;
 }
