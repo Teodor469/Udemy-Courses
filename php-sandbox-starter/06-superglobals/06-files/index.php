@@ -7,6 +7,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
   $title = htmlspecialchars($_POST['title'] ?? '');
   $description = htmlspecialchars($_POST['description'] ?? '');
 
+  echo '<pre>';
+  var_dump($_FILES);
+  echo '<pre>';
+
   $submitted = true;
 }
 ?>
