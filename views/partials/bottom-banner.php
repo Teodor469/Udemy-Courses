@@ -9,7 +9,7 @@
           </p>
         </div>
         <a
-          href="post-job.html"
+          href="/udemy-course-first/public/index.php/listings/create"
           class="bg-yellow-500 hover:bg-yellow-600 text-black px-4 py-2 rounded hover:shadow-md transition duration-300"
         >
           <i class="fa fa-edit"></i> Post a Job
