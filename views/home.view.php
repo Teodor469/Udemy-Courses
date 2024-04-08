@@ -1,5 +1,3 @@
-<?php require '../helpers.php' ?>
-
 <?= loadPartial('head'); ?>
 
     <!-- Nav -->
